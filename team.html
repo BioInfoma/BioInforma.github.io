@@ -135,15 +135,15 @@
             </p>
       </div>
 
-      <!-- ── TAB: DOCUMENTS ── -->
+     <!-- ── TAB: DOCUMENTS ── -->
       <div class="tab-pane" id="tab-docs">
         <div style="margin-bottom:32px;">
           <h2 class="section-title">Shared Documents</h2>
-          <p class="section-body"> key project documents and shared Drive folders here so you can access everything from one here.</p>
+          <p class="section-body">Key project documents and shared Drive folders — access everything from one place without leaving the website.</p>
         </div>
 
-
-        <!-- Doc embed 1 -->
+       
+        <!-- Doc embed -->
         <div class="embed-frame" style="margin-top:24px;">
           <div class="embed-titlebar">
             <div class="etb-dots">
@@ -153,12 +153,28 @@
             </div>
             <span class="etb-name">Project Documentation — Main Document</span>
           </div>
-          <div class="embed-body">
-            <div class="eicon">📄</div>
-            <p>
-              <code>https://docs.google.com/document/d/14aUmK2Sifx004sznEynNpD3vggim9rIV4SsiCHvqpf0/edit?tab=t.cgy5losyjhrp</code>
-            </p>
+          <iframe src="https://docs.google.com/document/d/e/2PACX-1vRwKSY97_XaTCGcNAWx-YgohlUiBt3piAzy0RCX1j0MN6QWhcqDLtLZuKR1RT9FzX1c1Ksgn94CIPiP/pub?embedded=true">
+            class="live-embed"
+            frameborder="0">
+          </iframe>
+        </div>
+
+        <!-- Drive folder embed -->
+        <div class="embed-frame" style="margin-top:20px;">
+          <div class="embed-titlebar">
+            <div class="etb-dots">
+              <div class="etb-dot" style="background:#fbbc05;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#4285f4;"></div>
+            </div>
+            <span class="etb-name">Project Drive Folder</span>
           </div>
+          <iframe
+            src="https://drive.google.com/embeddedfolderview?id=1IlWhy5_d8JNuVDlx6J56G_I2nP8hDoRr#list"
+            class="live-embed"
+            style="height:400px;"
+            frameborder="0">
+          </iframe>
         </div>
 
         <!-- Spreadsheet embed -->
@@ -173,22 +189,19 @@
           </div>
           <div class="embed-body">
             <div class="eicon">📊</div>
-            <p>
-              <code>https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/pubhtml?widget=true&headers=false</code>
-            </p>
-            </div>
+     
           </div>
+        </div>
 
         <!-- Quick access links -->
-        <div class="quick-links">
-          <a href="https://drive.google.com/drive/u/0/folders/1IlWhy5_d8JNuVDlx6J56G_I2nP8hDoRr" class="qlink" target="_blank">📁 Drive Folder</a>
-          <a href="https://docs.google.com/document/d/14aUmK2Sifx004sznEynNpD3vggim9rIV4SsiCHvqpf0/edit?tab=t.cgy5losyjhrp" class="qlink" target="_blank">📄 Project Document</a>
-          <a href="#" class="qlink" onclick="return false;">📊 Candidate Spreadsheet</a>
-          <a href="#" class="qlink" onclick="return false;">📚 Reference Library</a>
+        <div class="quick-links" style="margin-top:28px;">
+          <a href="https://drive.google.com/drive/u/0/folders/1IlWhy5_d8JNuVDlx6J56G_I2nP8hDoRr" class="qlink" target="_blank" rel="noopener">📁 Drive Folder</a>
+          <a href="https://docs.google.com/document/d/14aUmK2Sifx004sznEynNpD3vggim9rIV4SsiCHvqpf0/edit?tab=t.cgy5losyjhrp" class="qlink" target="_blank" rel="noopener">📄 Project Document</a>
+          <a href="#" class="qlink">📊 Candidate Spreadsheet</a>
+          <a href="#" class="qlink">📚 Reference Library</a>
         </div>
-        <p style="font-size:0.75rem; color:var(--ink-ghost); margin-top:12px;">
-        </p>
-      </div>
+
+      </div><!-- ✅ closes #tab-docs -->
 
       <!-- ── TAB: MEETING FORMAT ── -->
       <div class="tab-pane" id="tab-format">
@@ -198,7 +211,7 @@
         </div>
 
         <div class="meeting-format-card">
-          <h3>Standard Agenda: Every Meeting</h3>
+          <h3>Standard Agenda — Every Meeting</h3>
           <div class="agenda-items">
             <div class="agenda-item">
               <div class="agenda-num">1</div>
