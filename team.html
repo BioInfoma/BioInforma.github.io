@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExoRNA — Team & Schedule</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="cursor"><div class="cursor-dot" style="position:fixed;"></div></div>
+<div class="cursor"><div class="cursor-ring" style="position:fixed;"></div></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="9" cy="9" r="3.5" stroke="white" stroke-width="1.5"/>
+        <circle cx="9" cy="9" r="7.5" stroke="white" stroke-width="1" stroke-dasharray="2 2"/>
+        <path d="M9 1.5 Q13 5 9 9 Q5 13 9 16.5" stroke="#10b981" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+    ExoRNA Project
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero" style="min-height:50vh;">
+    <div class="hero-bg">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-bg-glow glow-1"></div>
+      <div class="hero-bg-glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">People · Schedule · Resources</div>
+      <h1>Team &amp; <em>Schedule</em></h1>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="val">Weekly</span><span class="lbl">Meeting cadence</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">4</span><span class="lbl">Agenda items</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">Google</span><span class="lbl">Calendar + Drive</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <section>
+    <div class="container">
+
+      <!-- Tabs -->
+      <div class="tabs-bar reveal">
+        <button class="tab-btn active"    onclick="switchTab('people', this)">Team Members</button>
+        <button class="tab-btn"           onclick="switchTab('calendar', this)">Meeting Schedule</button>
+        <button class="tab-btn"           onclick="switchTab('docs', this)">Shared Documents</button>
+        <button class="tab-btn"           onclick="switchTab('format', this)">Meeting Format</button>
+      </div>
+
+      <!-- ── TAB: PEOPLE ── -->
+      <div class="tab-pane active" id="tab-people">
+        <div style="margin-bottom:32px;">
+          <h2 class="section-title">Project Researchers</h2>
+          <p class="section-body">Update the cards below with each team member's name, role, and short biography. To add a new member, duplicate any <code style="font-family:var(--mono);font-size:.85em;background:var(--paper-2);padding:2px 7px;border-radius:4px;">team-card</code> block in <code style="font-family:var(--mono);font-size:.85em;background:var(--paper-2);padding:2px 7px;border-radius:4px;">team.html</code>.</p>
+        </div>
+
+        <div class="team-grid">
+
+          <div class="team-card">
+            <div class="avatar">PI</div>
+            <h3>Principal Investigator</h3>
+            <div class="team-role">Project Lead</div>
+            <p class="team-bio">Responsible for overall project direction, student mentorship, timeline oversight, and manuscript review. Replace this with the PI's actual name and institution.</p>
+          </div>
+
+          <div class="team-card">
+            <div class="avatar">R1</div>
+            <h3>Researcher 1</h3>
+            <div class="team-role">Bioinformatics Analyst</div>
+            <p class="team-bio">Leads circRNA candidate identification, exosome filtering steps, and miRNA–mRNA interaction mapping. Replace with real name and biography.</p>
+          </div>
+
+          <div class="team-card">
+            <div class="avatar">R2</div>
+            <h3>Researcher 2</h3>
+            <div class="team-role">Computational Biologist</div>
+            <p class="team-bio">Responsible for TCGA-PAAD data download, differential expression analysis, and survival analysis pipeline in R. Replace with real name and biography.</p>
+          </div>
+
+          <div class="team-card">
+            <div class="avatar">R3</div>
+            <h3>Researcher 3</h3>
+            <div class="team-role">Network & Pathway Analyst</div>
+            <p class="team-bio">Leads the Cytoscape network construction, topology analysis, and pathway enrichment using KEGG, Reactome, and MSigDB. Replace with real name and biography.</p>
+          </div>
+
+          <!-- Add card placeholder -->
+          <div class="team-card add-card">
+            <div class="add-icon">＋</div>
+            <span>Add team member</span>
+            <span style="font-size:0.75rem;opacity:.6;">Edit team.html</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ── TAB: CALENDAR ── -->
+      <div class="tab-pane" id="tab-calendar">
+        <div style="margin-bottom:32px;">
+          <h2 class="section-title">Meeting Schedule</h2>
+          <p class="section-body">Embed your shared Google Calendar below so all team members can view and sync upcoming meetings from this page.</p>
+        </div>
+
+        <div class="howto-card">
+          <p><strong>How to embed your Google Calendar:</strong></p>
+          <ol class="howto-steps">
+            <li>Open Google Calendar → Settings (⚙) → select your project calendar → <strong>Integrate calendar</strong></li>
+            <li>Copy the <strong>Embed code</strong> — it starts with <code>&lt;iframe src="https://calendar.google.com/...</code></li>
+            <li>In <code>team.html</code>, find the calendar embed section and replace the placeholder div with the iframe</li>
+            <li>Set <code>width="100%"</code> and <code>height="560"</code> on the iframe element</li>
+          </ol>
+        </div>
+
+        <div class="embed-frame">
+          <div class="embed-titlebar">
+            <div class="etb-dots">
+              <div class="etb-dot" style="background:#fe5f57;"></div>
+              <div class="etb-dot" style="background:#febc2e;"></div>
+              <div class="etb-dot" style="background:#28c840;"></div>
+            </div>
+            <span class="etb-name">Google Calendar — ExoRNA Project Meetings</span>
+          </div>
+          <div class="embed-body">
+            <div class="eicon">📅</div>
+            <p>
+              Paste your Google Calendar embed here.<br/><br/>
+              Your iframe <code>src</code> will look like:<br/>
+              <code>https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=YOUR_TIMEZONE</code>
+            </p>
+          </div>
+          <!--
+            REPLACE THE EMBED BODY ABOVE WITH YOUR IFRAME — example:
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&ctz=Africa/Lagos"
+              class="live-embed"
+              frameborder="0"
+              scrolling="no">
+            </iframe>
+          -->
+        </div>
+      </div>
+
+      <!-- ── TAB: DOCUMENTS ── -->
+      <div class="tab-pane" id="tab-docs">
+        <div style="margin-bottom:32px;">
+          <h2 class="section-title">Shared Documents</h2>
+          <p class="section-body">Embed your key project documents and shared Drive folders here so the team can access everything from one place without leaving the website.</p>
+        </div>
+
+        <!-- How-to -->
+        <div class="howto-card" style="margin-bottom:20px;">
+          <p><strong>How to embed a Google Doc:</strong></p>
+          <ol class="howto-steps">
+            <li>Open the Google Doc → <strong>File → Share → Publish to web</strong></li>
+            <li>Click the <strong>Embed</strong> tab → copy the <code>&lt;iframe&gt;</code> code</li>
+            <li>Replace the placeholder <code>embed-body</code> div below with your iframe</li>
+          </ol>
+        </div>
+        <div class="howto-card" style="border-left-color: var(--emerald); background: var(--emerald-lt);">
+          <p><strong>How to embed a Google Drive folder:</strong> Use <code>https://drive.google.com/embeddedfolderview?id=YOUR_FOLDER_ID#list</code> as the iframe <code>src</code>. Set <code>height="400"</code>.</p>
+        </div>
+
+        <!-- Doc embed 1 -->
+        <div class="embed-frame" style="margin-top:24px;">
+          <div class="embed-titlebar">
+            <div class="etb-dots">
+              <div class="etb-dot" style="background:#4285f4;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#fbbc05;"></div>
+            </div>
+            <span class="etb-name">Project Documentation — Main Document</span>
+          </div>
+          <div class="embed-body">
+            <div class="eicon">📄</div>
+            <p>
+              Replace this section with your Google Docs embed.<br/><br/>
+              Example <code>src</code>:<br/>
+              <code>https://docs.google.com/document/d/YOUR_DOC_ID/pub?embedded=true</code>
+            </p>
+          </div>
+          <!-- REPLACE WITH: <iframe src="https://docs.google.com/document/d/DOC_ID/pub?embedded=true" class="live-embed"></iframe> -->
+        </div>
+
+        <!-- Spreadsheet embed -->
+        <div class="embed-frame" style="margin-top:20px;">
+          <div class="embed-titlebar">
+            <div class="etb-dots">
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+            </div>
+            <span class="etb-name">Candidate circRNA Spreadsheet</span>
+          </div>
+          <div class="embed-body">
+            <div class="eicon">📊</div>
+            <p>
+              Replace this with your shared Google Sheets embed.<br/><br/>
+              Example <code>src</code>:<br/>
+              <code>https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/pubhtml?widget=true&headers=false</code>
+            </p>
+          </div>
+          <!-- REPLACE WITH: <iframe src="https://docs.google.com/spreadsheets/d/SHEET_ID/pubhtml?widget=true&headers=false" class="live-embed" style="height:400px;"></iframe> -->
+        </div>
+
+        <!-- Quick access links -->
+        <div class="quick-links">
+          <a href="#" class="qlink" onclick="return false;">📁 Drive Folder</a>
+          <a href="#" class="qlink" onclick="return false;">📄 Project Document</a>
+          <a href="#" class="qlink" onclick="return false;">📊 Candidate Spreadsheet</a>
+          <a href="#" class="qlink" onclick="return false;">📚 Reference Library</a>
+        </div>
+        <p style="font-size:0.75rem; color:var(--ink-ghost); margin-top:12px;">
+          Update the <code style="font-family:var(--mono);font-size:.85em;background:var(--paper-2);padding:1px 6px;border-radius:3px;">href</code> values on the quick links above with your actual Google Drive URLs.
+        </p>
+      </div>
+
+      <!-- ── TAB: MEETING FORMAT ── -->
+      <div class="tab-pane" id="tab-format">
+        <div style="margin-bottom:32px;">
+          <h2 class="section-title">Weekly Meeting Format</h2>
+          <p class="section-body">Every meeting follows the same four-point agenda — simple, efficient, and focused on moving the project forward. Sessions should not exceed 60 minutes.</p>
+        </div>
+
+        <div class="meeting-format-card">
+          <h3>Standard Agenda — Every Meeting</h3>
+          <div class="agenda-items">
+            <div class="agenda-item">
+              <div class="agenda-num">1</div>
+              <div class="agenda-text">
+                <h4>What did you do this week?</h4>
+                <p>Each researcher reports progress against last week's stated goal. Be specific — deliverables, not effort. Aim for two to three sentences per person.</p>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-num">2</div>
+              <div class="agenda-text">
+                <h4>What worked?</h4>
+                <p>Highlight successful steps, useful databases, helpful papers, or insights gained. Share resources that others might benefit from. Positive results are worth recording.</p>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-num">3</div>
+              <div class="agenda-text">
+                <h4>What broke?</h4>
+                <p>Surface blockers, errors, confusion, or dead ends early so the team can problem-solve together before they become delays. No blame — only solutions.</p>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-num">4</div>
+              <div class="agenda-text">
+                <h4>What is next week's goal?</h4>
+                <p>Define one clear, concrete, deliverable-oriented goal for the coming week. It should be specific enough that success is unambiguous at the next meeting.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phase-specific meeting expectations -->
+        <div class="card-grid-2" style="margin-top:24px;">
+          <div class="card">
+            <div class="card-icon">📖</div>
+            <h3>Phase 1 Meeting Goal</h3>
+            <p>All members can explain exosomes and circRNAs in plain language. Written summaries submitted. Live R code demonstrated during the meeting session.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🔍</div>
+            <h3>Phase 2 Meeting Goal</h3>
+            <p>Shared spreadsheets reviewed together. Inclusion/exclusion decisions for exosome filtering discussed and recorded with explicit reasoning.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🕸️</div>
+            <h3>Phase 3–4 Meeting Goal</h3>
+            <p>Live demo of analysis outputs: differential expression results, Cytoscape network screenshot, and initial Kaplan–Meier survival curves presented each week.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">✍️</div>
+            <h3>Phase 5 Meeting Goal</h3>
+            <p>Draft figures and text sections reviewed. Each researcher reads and annotates at least one colleague's methods section before every Phase 5 meeting.</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </section>
+
+</div>
+
+<footer>
+  <span class="foot-brand">ExoRNA Project</span>
+  <ul class="foot-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+  <span class="foot-copy">TEAM · SCHEDULE · RESOURCES</span>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExoRNA — Methods</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="cursor"><div class="cursor-dot" style="position:fixed;"></div></div>
+<div class="cursor"><div class="cursor-ring" style="position:fixed;"></div></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="9" cy="9" r="3.5" stroke="white" stroke-width="1.5"/>
+        <circle cx="9" cy="9" r="7.5" stroke="white" stroke-width="1" stroke-dasharray="2 2"/>
+        <path d="M9 1.5 Q13 5 9 9 Q5 13 9 16.5" stroke="#10b981" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+    ExoRNA Project
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero" style="min-height:55vh;">
+    <div class="hero-bg">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-bg-glow glow-1"></div>
+      <div class="hero-bg-glow glow-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Analysis Pipeline · 11 Steps · Mechanism-Aware</div>
+      <h1>Methods — <em>The Pipeline</em></h1>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="val">11</span><span class="lbl">Ordered steps</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">TCGA</span><span class="lbl">Validation dataset</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">R</span><span class="lbl">Primary language</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">Cytoscape</span><span class="lbl">Network tool</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pipeline -->
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Pipeline Overview</div>
+        <h2 class="section-title">From disease scope to<br/><em>biomarker signature</em></h2>
+        <p class="section-body">Each step builds on the last. Students follow them in sequence. Every step has a defined goal, a set of databases or tools, and a concrete deliverable to be checked at the weekly meeting.</p>
+      </div>
+
+      <div class="pipeline">
+
+        <!-- Step 01 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">01</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Foundation</div>
+              <h4>Define the Disease and Biological Scope</h4>
+              <p>Establish a shared understanding of PDAC, why early detection is difficult, and why exosomal circRNAs are promising biomarkers. Each student reads at least one paper on exosomes in cancer and one circRNA review before progressing.</p>
+              <div class="step-tools">
+                <span class="tag">Literature review</span>
+                <span class="tag green">½–1 page written summary</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 02 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">02</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Data Collection</div>
+              <h4>Identify circRNAs Reported in Pancreatic Cancer</h4>
+              <p>Search circRNA disease association databases and expression atlases for circRNAs reported as dysregulated in PDAC. For each candidate, collect: circRNA name, host gene, direction of change (up/down in PDAC), and the source paper.</p>
+              <div class="step-tools">
+                <span class="tag blue">circRNA disease databases</span>
+                <span class="tag blue">Expression atlases</span>
+                <span class="tag green">Shared spreadsheet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 03 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">03</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Filtering</div>
+              <h4>Filter for circRNAs Found in Exosomes</h4>
+              <p>A circRNA can be dysregulated in tumor tissue but not released into blood. Cross-reference the candidate list against EV/exosome RNA databases. Keep only candidates with evidence of presence in extracellular vesicles — these are the ones that could become blood biomarkers.</p>
+              <div class="step-tools">
+                <span class="tag blue">EV RNA repositories</span>
+                <span class="tag blue">Published EV datasets</span>
+                <span class="tag green">Refined candidate list</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 04 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">04</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Interaction Mapping</div>
+              <h4>Predict miRNAs That Interact with Each circRNA</h4>
+              <p>Many circRNAs act as microRNA sponges: when a circRNA binds a miRNA, that miRNA becomes unavailable to suppress its target mRNAs. Use miRNA target prediction tools and circRNA–miRNA interaction resources to identify which microRNAs each candidate circRNA can sequester.</p>
+              <div class="step-tools">
+                <span class="tag blue">miRNA prediction tools</span>
+                <span class="tag blue">circRNA–miRNA databases</span>
+                <span class="tag green">circRNA–miRNA interaction table</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 05 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">05</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Target Identification</div>
+              <h4>Identify Downstream mRNA Targets of the miRNAs</h4>
+              <p>Retrieve predicted and experimentally validated mRNA targets for each miRNA identified in Step 4. Focus on genes involved in cancer, cell cycle regulation, metabolism, and inflammation. This completes the regulatory chain: <strong>circRNA → miRNA → mRNA → biological function</strong>.</p>
+              <div class="step-tools">
+                <span class="tag blue">miRNA target databases</span>
+                <span class="tag blue">Validated interaction resources</span>
+                <span class="tag green">Complete regulatory chain table</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 06 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">06</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Tumor Validation</div>
+              <h4>Validate mRNA Targets Using TCGA-PAAD Tumor Data</h4>
+              <p>Download mRNA expression and clinical data from TCGA-PAAD. Check whether predicted target genes are differentially expressed between PDAC tumors and normal pancreatic tissue. Remove genes that are not actually dysregulated in real patient data — this critical step filters out false computational predictions.</p>
+              <div class="step-tools">
+                <span class="tag">TCGA-PAAD</span>
+                <span class="tag green">R / DEG analysis</span>
+                <span class="tag green">Validated target gene list</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 07 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">07</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Network Construction</div>
+              <h4>Construct the ceRNA Regulatory Network</h4>
+              <p>Build a circRNA–miRNA–mRNA regulatory network from all validated interactions. Nodes represent circRNAs, miRNAs, and mRNAs; edges represent regulatory relationships. Import into Cytoscape for visualization and topology analysis. Identify hub circRNAs — those connecting to many partners — as the strongest biomarker and functional candidates.</p>
+              <div class="step-tools">
+                <span class="tag blue">Cytoscape</span>
+                <span class="tag">Network topology</span>
+                <span class="tag green">Hub circRNA identification</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 08 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">08</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Functional Annotation</div>
+              <h4>Perform Pathway and Functional Enrichment</h4>
+              <p>Run pathway enrichment analysis on the validated mRNA target set using KEGG, Reactome, and MSigDB. Identify which cancer-related, immune, metabolic, and cell proliferation pathways are significantly enriched. A robust biomarker panel should connect to known cancer biology — not random genes.</p>
+              <div class="step-tools">
+                <span class="tag">KEGG</span>
+                <span class="tag">Reactome</span>
+                <span class="tag">MSigDB</span>
+                <span class="tag green">Enrichment table and figure</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 09 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">09</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Clinical Relevance</div>
+              <h4>Survival Analysis and Risk Stratification</h4>
+              <p>Split TCGA-PAAD patients into high- and low-expression groups for each candidate circRNA. Perform Kaplan–Meier survival analysis using log-rank tests. Identify which circRNAs are significantly associated with overall survival. Combine the top candidates into a high-risk circRNA panel.</p>
+              <div class="step-tools">
+                <span class="tag green">R</span>
+                <span class="tag green">survival package</span>
+                <span class="tag green">Kaplan–Meier plots</span>
+                <span class="tag gold">Prognostic ranking</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 10 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">10</div><div class="step-line"></div></div>
+          <div class="pipeline-right reveal">
+            <div class="step-content">
+              <div class="sc-label">Signature Definition</div>
+              <h4>Build the Final Biomarker Signature</h4>
+              <p>Select a small, interpretable panel of circRNAs that satisfy all three evidence criteria: exosome-associated, participating in the ceRNA network, and linked to patient survival. Provide biological interpretation for each candidate. Smaller, biologically meaningful panels are far more clinically translatable than large gene lists.</p>
+              <div class="step-tools">
+                <span class="tag gold">Final biomarker panel</span>
+                <span class="tag">Biological rationale per candidate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 11 -->
+        <div class="pipeline-step">
+          <div class="pipeline-left"><div class="step-circle">11</div><div class="step-line" style="display:none;"></div></div>
+          <div class="pipeline-right reveal" style="padding-bottom:0;">
+            <div class="step-content">
+              <div class="sc-label">Reproducibility</div>
+              <h4>Documentation and Reproducibility</h4>
+              <p>Compile all clean, annotated scripts, a detailed methods summary, and a README explaining every analysis step. Archive all intermediate result tables. Reproducibility is not optional — a project that cannot be reproduced by a future researcher does not advance science.</p>
+              <div class="step-tools">
+                <span class="tag green">Clean R scripts</span>
+                <span class="tag green">README</span>
+                <span class="tag green">Methods summary</span>
+                <span class="tag">All intermediate tables</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /pipeline -->
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section style="background:var(--paper-2);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Tools & Software</div>
+        <h2 class="section-title">The analytical stack</h2>
+      </div>
+      <div class="tools-grid reveal">
+        <div class="tool-card"><div class="tool-name">R + tidyverse</div><div class="tool-desc">Core analysis language for data wrangling, statistics, and plotting</div></div>
+        <div class="tool-card"><div class="tool-name">R / survival</div><div class="tool-desc">Kaplan–Meier curves and log-rank survival statistical tests</div></div>
+        <div class="tool-card"><div class="tool-name">Cytoscape</div><div class="tool-desc">Network visualization, layout, and topology analysis</div></div>
+        <div class="tool-card"><div class="tool-name">ggplot2</div><div class="tool-desc">Publication-quality data visualizations and statistical figures</div></div>
+        <div class="tool-card"><div class="tool-name">ComplexHeatmap</div><div class="tool-desc">Heatmaps for circRNA expression and candidate landscapes</div></div>
+        <div class="tool-card"><div class="tool-name">KEGG / Reactome</div><div class="tool-desc">Pathway and functional gene set enrichment databases</div></div>
+        <div class="tool-card"><div class="tool-name">MSigDB</div><div class="tool-desc">Curated hallmark gene set resource for enrichment analysis</div></div>
+        <div class="tool-card"><div class="tool-name">TCGA-PAAD</div><div class="tool-desc">Patient mRNA expression and clinical outcome data for validation</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Figure plan -->
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Manuscript Outline</div>
+        <h2 class="section-title">Figure-by-figure plan</h2>
+        <p class="section-body">Each figure maps directly to a pipeline step. The narrative arc runs from conceptual overview to clinical relevance.</p>
+      </div>
+
+      <div class="figure-table reveal">
+        <div class="figure-row">
+          <div class="figure-label" style="font-weight:600; color:var(--ink-muted);">Figure</div>
+          <div class="figure-content" style="background:var(--paper-2); padding:14px 24px;"><span style="font-size:0.78rem; font-weight:600; color:var(--ink-muted); font-family:var(--mono); letter-spacing:0.08em;">TITLE & DESCRIPTION</span></div>
+        </div>
+        <div class="figure-row">
+          <div class="figure-label">Fig. 1</div>
+          <div class="figure-content">
+            <h4>Conceptual Framework</h4>
+            <p>Diagram illustrating the full mechanistic chain: exosome release from tumor cell → circRNA cargo → miRNA sponging → mRNA de-repression → altered cancer gene programs → clinical outcome.</p>
+          </div>
+        </div>
+        <div class="figure-row">
+          <div class="figure-label">Fig. 2</div>
+          <div class="figure-content">
+            <h4>circRNA Candidate Landscape</h4>
+            <p>Heatmap or ranked plot of PDAC-associated circRNAs with expression direction, exosome evidence tier, and literature source annotated per candidate.</p>
+          </div>
+        </div>
+        <div class="figure-row">
+          <div class="figure-label">Fig. 3</div>
+          <div class="figure-content">
+            <h4>ceRNA Interaction Network</h4>
+            <p>Full circRNA–miRNA–mRNA network visualization from Cytoscape. Nodes colored by molecule type; edge width reflects interaction confidence; hub circRNAs highlighted with enlarged nodes.</p>
+          </div>
+        </div>
+        <div class="figure-row">
+          <div class="figure-label">Fig. 4</div>
+          <div class="figure-content">
+            <h4>Pathway Enrichment of Target Genes</h4>
+            <p>Dot plot or bubble chart of significantly enriched KEGG/Reactome biological processes in the mRNA target set, sized by gene count and colored by adjusted p-value.</p>
+          </div>
+        </div>
+        <div class="figure-row">
+          <div class="figure-label">Fig. 5</div>
+          <div class="figure-content">
+            <h4>Survival Stratification</h4>
+            <p>Kaplan–Meier survival curves comparing high-risk vs low-risk patient groups defined by the final circRNA panel expression. Log-rank p-values and hazard ratios reported for each candidate.</p>
+          </div>
+        </div>
+        <div class="figure-row">
+          <div class="figure-label">Fig. 6</div>
+          <div class="figure-content">
+            <h4>Proposed Biomarker Framework</h4>
+            <p>Final summary model integrating all three evidence streams — exosome association, ceRNA network centrality, and patient survival — into a unified biomarker prioritization framework.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span class="foot-brand">ExoRNA Project</span>
+  <ul class="foot-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+  <span class="foot-copy">11-STEP PIPELINE · MECHANISM-AWARE</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

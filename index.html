@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExoRNA — Exosomal circRNA Biomarkers in Pancreatic Cancer</title>
+  <meta name="description" content="A computational biomarker discovery pipeline integrating exosomal circRNA expression, ceRNA networks, and patient survival for PDAC." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div class="cursor"><div class="cursor-dot" style="position:fixed;"></div></div>
+<div class="cursor"><div class="cursor-ring" style="position:fixed;"></div></div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="9" cy="9" r="3.5" stroke="white" stroke-width="1.5"/>
+        <circle cx="9" cy="9" r="7.5" stroke="white" stroke-width="1" stroke-dasharray="2 2"/>
+        <path d="M9 1.5 Q13 5 9 9 Q5 13 9 16.5" stroke="#10b981" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+    ExoRNA Project
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- ══ HERO ══════════════════════════════════════════════════ -->
+  <div class="hero">
+    <div class="hero-bg">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-bg-glow glow-1"></div>
+      <div class="hero-bg-glow glow-2"></div>
+      <div class="hero-bg-glow glow-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Translational Bioinformatics · PDAC · Liquid Biopsy</div>
+
+      <h1>
+        Exosomal <em>circular RNA</em><br/>
+        Biomarkers for Early Detection<br/>
+        of Pancreatic Cancer
+      </h1>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="val">5</span>
+          <span class="lbl">Research Phases</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item">
+          <span class="val">24</span>
+          <span class="lbl">Weeks Duration</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item">
+          <span class="val">11</span>
+          <span class="lbl">Pipeline Steps</span>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item">
+          <span class="val">TCGA</span>
+          <span class="lbl">Core Dataset</span>
+        </div>
+        <div class="hero-cta">
+          <a href="phases.html" class="btn btn-primary">View Timeline →</a>
+          <a href="methods.html" class="btn btn-ghost">Methods</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ LAYMAN QUESTION ══════════════════════════════════════ -->
+  <section class="question-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">The Central Question</div>
+        <h2 class="section-title">Why pancreatic cancer? Why now?</h2>
+      </div>
+
+      <div class="pull-quote reveal reveal-delay-1">
+        "Can stable RNA molecules released into the blood by cancer cells be used to detect pancreatic cancer earlier and predict patient outcomes?"
+      </div>
+
+      <div class="section-body reveal reveal-delay-2">
+        <p>
+          Pancreatic ductal adenocarcinoma (PDAC) is one of the most lethal cancers largely because it is almost always diagnosed too late. Current blood-based protein markers such as CA19-9 lack sufficient sensitivity and specificity for early-stage disease.
+        </p>
+        <p>
+          This project asks whether <strong>circular RNAs (circRNAs)</strong> — highly stable, covalently closed RNA molecules that cancer cells package into exosomes and release into blood — could serve as more reliable, non-invasive biomarkers. Their resistance to degradation makes them uniquely suited for liquid biopsy applications.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BACKGROUND ═══════════════════════════════════════════ -->
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Background & Rationale</div>
+        <h2 class="section-title">Three converging fields<br/>of molecular biology</h2>
+      </div>
+
+      <div class="card-grid-2">
+        <div class="card reveal reveal-delay-1">
+          <div class="card-icon">🧫</div>
+          <h3>Exosomes & Liquid Biopsy</h3>
+          <p>Cancer cells communicate by releasing extracellular vesicles (EVs) — especially exosomes — that carry proteins and RNAs mirroring the tumor's biological state. Because exosomes circulate freely in blood, they form the foundation of liquid biopsy: a non-invasive alternative to surgical tissue sampling that can be repeated over time.</p>
+        </div>
+
+        <div class="card reveal reveal-delay-2">
+          <div class="card-icon">🔁</div>
+          <h3>Circular RNA (circRNA) Biology</h3>
+          <p>circRNAs are covalently closed RNA molecules formed by back-splicing. The absence of free 5′ and 3′ ends makes them highly resistant to degradation — an ideal property for circulating biomarkers. Many circRNAs act as <em>microRNA sponges</em>, placing them at the centre of the ceRNA regulatory framework that shapes cancer gene expression.</p>
+        </div>
+
+        <div class="card reveal reveal-delay-3">
+          <div class="card-icon">🦠</div>
+          <h3>Pancreatic Cancer (PDAC)</h3>
+          <p>PDAC is the most common and lethal form of pancreatic cancer, typically diagnosed at advanced stages due to the lack of early biomarkers. Large-scale transcriptomic datasets such as TCGA-PAAD offer a unique computational opportunity to discover prognostic RNA signatures that can later be validated in blood-based liquid biopsy settings.</p>
+        </div>
+
+        <div class="card reveal reveal-delay-4">
+          <div class="card-icon">🕸️</div>
+          <h3>ceRNA Regulatory Networks</h3>
+          <p>The competing endogenous RNA (ceRNA) framework describes how circRNAs sponge miRNAs, freeing downstream mRNA targets from suppression and reshaping cancer gene expression programs. Mapping these networks provides both mechanistic insight and a rational basis for biomarker prioritisation across the circRNA–miRNA–mRNA regulatory chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ AIMS ═════════════════════════════════════════════════ -->
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Specific Aims</div>
+        <h2 class="section-title">Three hypotheses driving<br/>this project forward</h2>
+        <p class="section-body">Each aim builds on the last — from candidate identification through network construction to clinical prognostic relevance.</p>
+      </div>
+
+      <div class="aims-list">
+        <div class="aim-card reveal reveal-delay-1">
+          <div class="aim-num-block">
+            <span class="aim-counter">Aim</span>
+            <span class="aim-label">01</span>
+            <div class="aim-divider"></div>
+          </div>
+          <div class="aim-body">
+            <div class="aim-hyp">Hypothesis</div>
+            <h4>Identify PDAC-associated exosomal circRNAs</h4>
+            <p>circRNAs enriched in exosomes are dysregulated in PDAC and reflect the underlying tumor biology, making them viable non-invasive detection candidates that could be measured from a simple blood draw.</p>
+          </div>
+        </div>
+
+        <div class="aim-card reveal reveal-delay-2">
+          <div class="aim-num-block">
+            <span class="aim-counter">Aim</span>
+            <span class="aim-label">02</span>
+            <div class="aim-divider"></div>
+          </div>
+          <div class="aim-body">
+            <div class="aim-hyp">Hypothesis</div>
+            <h4>Construct ceRNA regulatory networks</h4>
+            <p>PDAC-associated circRNAs regulate cancer-relevant genes through miRNA-mediated ceRNA mechanisms, providing both mechanistic insight into tumor biology and a network-level basis for biomarker candidate prioritisation.</p>
+          </div>
+        </div>
+
+        <div class="aim-card reveal reveal-delay-3">
+          <div class="aim-num-block">
+            <span class="aim-counter">Aim</span>
+            <span class="aim-label">03</span>
+            <div class="aim-divider"></div>
+          </div>
+          <div class="aim-body">
+            <div class="aim-hyp">Hypothesis</div>
+            <h4>Derive a prognostic circRNA signature</h4>
+            <p>A subset of exosomal circRNAs is significantly associated with patient survival in the TCGA-PAAD cohort and can define high-risk molecular subgroups, supporting clinical decision-making and prognostic stratification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ OUTCOMES ═════════════════════════════════════════════ -->
+  <section style="background:var(--paper-2);">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Expected Outcomes</div>
+        <h2 class="section-title">What this project<br/>will produce</h2>
+      </div>
+
+      <div class="outcomes-grid">
+        <div class="outcome-card reveal reveal-delay-1">
+          <div class="outcome-number">01</div>
+          <h3>Novel Biomarker Signature</h3>
+          <p>A small, interpretable panel of exosome-derived circRNAs linked to PDAC prognosis, with biological rationale for each candidate and a clear path to experimental validation.</p>
+        </div>
+        <div class="outcome-card reveal reveal-delay-2">
+          <div class="outcome-number">02</div>
+          <h3>Mechanistic ceRNA Network</h3>
+          <p>A visualized circRNA–miRNA–mRNA interaction network in Cytoscape identifying hub regulators in pancreatic cancer biology and key downstream effector pathways.</p>
+        </div>
+        <div class="outcome-card reveal reveal-delay-3">
+          <div class="outcome-number">03</div>
+          <h3>Reusable Analysis Pipeline</h3>
+          <p>A reproducible, fully documented R-based analysis workflow — complete with clean scripts and README — adaptable to other cancer types and RNA biomarker discovery projects.</p>
+        </div>
+        <div class="outcome-card reveal reveal-delay-4">
+          <div class="outcome-number">04</div>
+          <h3>Research Training</h3>
+          <p>Structured mentorship in translational bioinformatics, network biology, survival analysis, and scientific communication for both medical and computational students.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ KEY LITERATURE ═══════════════════════════════════════ -->
+  <section>
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Key Literature</div>
+        <h2 class="section-title">Foundational references</h2>
+        <p class="section-body">Core papers that establish the biological and methodological foundation of this project.</p>
+      </div>
+
+      <div class="ref-list reveal">
+        <div class="ref-item">
+          <span class="ref-tag ev">EV / Exosome</span>
+          <span class="ref-title">Exosomes in cancer biology and liquid biopsy</span>
+          <a class="ref-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8049049/" target="_blank">PMC8049049 ↗</a>
+        </div>
+        <div class="ref-item">
+          <span class="ref-tag ev">EV / Tumor</span>
+          <span class="ref-title">Tumor–host communication via extracellular vesicles</span>
+          <a class="ref-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12346031/" target="_blank">PMC12346031 ↗</a>
+        </div>
+        <div class="ref-item">
+          <span class="ref-tag circ">circRNA</span>
+          <span class="ref-title">Comprehensive review of circRNAs in cancer biology</span>
+          <a class="ref-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6697450/" target="_blank">PMC6697450 ↗</a>
+        </div>
+        <div class="ref-item">
+          <span class="ref-tag rna">RNA Biomarkers</span>
+          <span class="ref-title">RNA-based biomarkers in oncology</span>
+          <a class="ref-link" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5832009/" target="_blank">PMC5832009 ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span class="foot-brand">ExoRNA Project</span>
+  <ul class="foot-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+  <span class="foot-copy">PDAC · CIRCRNA · LIQUID BIOPSY</span>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

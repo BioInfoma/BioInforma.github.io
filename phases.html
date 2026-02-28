@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ExoRNA — Project Timeline</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="cursor"><div class="cursor-dot" style="position:fixed;"></div></div>
+<div class="cursor"><div class="cursor-ring" style="position:fixed;"></div></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-icon">
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="9" cy="9" r="3.5" stroke="white" stroke-width="1.5"/>
+        <circle cx="9" cy="9" r="7.5" stroke="white" stroke-width="1" stroke-dasharray="2 2"/>
+        <path d="M9 1.5 Q13 5 9 9 Q5 13 9 16.5" stroke="#10b981" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+    ExoRNA Project
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- Hero -->
+  <div class="hero" style="min-height:55vh;">
+    <div class="hero-bg">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-bg-glow glow-1"></div>
+      <div class="hero-bg-glow glow-2"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Project Roadmap · 5 Phases · 20–24 Weeks</div>
+      <h1>Research <em>Timeline</em></h1>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><span class="val">Phase 1</span><span class="lbl">Foundations</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">Phase 2</span><span class="lbl">Discovery</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">Phase 3</span><span class="lbl">Integration</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">Phase 4</span><span class="lbl">Analysis</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-meta-item"><span class="val">Phase 5</span><span class="lbl">Writing</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline content -->
+  <section>
+    <div class="container">
+
+      <!-- Phase nav pills -->
+      <div class="phases-nav reveal">
+        <button class="phase-pill active" onclick="switchPhase(1, this)"><span class="dot"></span>Phase 1 — Foundations</button>
+        <button class="phase-pill" onclick="switchPhase(2, this)"><span class="dot"></span>Phase 2 — Discovery</button>
+        <button class="phase-pill" onclick="switchPhase(3, this)"><span class="dot"></span>Phase 3 — Integration</button>
+        <button class="phase-pill" onclick="switchPhase(4, this)"><span class="dot"></span>Phase 4 — Analysis</button>
+        <button class="phase-pill" onclick="switchPhase(5, this)"><span class="dot"></span>Phase 5 — Writing</button>
+      </div>
+
+      <!-- ── PHASE 1 ── -->
+      <div class="phase-block active" id="phase-1">
+        <div class="phase-header-card">
+          <div>
+            <div class="phc-label">Phase 1 · Weeks 1–4</div>
+            <div class="phc-title">Foundations — Biology & R Skills</div>
+          </div>
+          <div class="phc-weeks">
+            <div class="wval">4</div>
+            <div class="wlbl">Weeks</div>
+          </div>
+        </div>
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="wc-num">Week 1</div>
+            <div class="wc-title">Orientation + Molecular Biology Basics</div>
+            <div class="wc-body">Understand the project goal (exosomes + circRNAs + PDAC). Read two intro papers on exosomes and liquid biopsy. Install R and run basic syntax including printing, variables, and comments.</div>
+            <div class="wc-tags">
+              <span class="tag green">R Basics</span>
+              <span class="tag">1-page summary</span>
+              <span class="tag">Literature</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 2</div>
+            <div class="wc-title">Circular RNA Biology + Data Structures in R</div>
+            <div class="wc-body">Understand circRNAs and the ceRNA concept. Read 2–3 papers on circRNA biology and miRNA sponging. Learn R data types and structures: vectors, lists, matrices, and data frames.</div>
+            <div class="wc-tags">
+              <span class="tag green">R Data Structures</span>
+              <span class="tag">circRNA review</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 3</div>
+            <div class="wc-title">Pancreatic Cancer Context + Control Structures</div>
+            <div class="wc-body">Understand PDAC biology and the clinical early-detection problem. Read biomarker reviews. Learn R control structures: if/else, for loops, while loops.</div>
+            <div class="wc-tags">
+              <span class="tag green">R Loops & Logic</span>
+              <span class="tag">PDAC review</span>
+              <span class="tag">1-page summary</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 4</div>
+            <div class="wc-title">ceRNA Networks + Functions & Visualization</div>
+            <div class="wc-body">Understand regulatory network logic and the ceRNA framework. Write an R function. Create basic bar plots and scatter plots. Draw a ceRNA diagram on paper: circRNA → miRNA → mRNA.</div>
+            <div class="wc-tags">
+              <span class="tag green">ggplot2</span>
+              <span class="tag">ceRNA diagram</span>
+              <span class="tag">R functions</span>
+            </div>
+          </div>
+        </div>
+        <div class="deliverables-box" style="margin-top:28px;">
+          <h3>Phase 1 — Meeting Goal</h3>
+          <div class="del-grid">
+            <div class="del-item">Explain exosomes as biomarkers in plain language</div>
+            <div class="del-item">Explain what a circRNA is and why it is stable in blood</div>
+            <div class="del-item">Explain early PDAC detection challenges</div>
+            <div class="del-item">Demonstrate working R code in live review</div>
+            <div class="del-item">Draw a ceRNA diagram from memory</div>
+            <div class="del-item">Submit all three 1-page written summaries</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PHASE 2 ── -->
+      <div class="phase-block" id="phase-2">
+        <div class="phase-header-card">
+          <div>
+            <div class="phc-label">Phase 2 · Weeks 5–8</div>
+            <div class="phc-title">Data Discovery & Candidate Identification</div>
+          </div>
+          <div class="phc-weeks">
+            <div class="wval">4</div>
+            <div class="wlbl">Weeks</div>
+          </div>
+        </div>
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="wc-num">Week 5</div>
+            <div class="wc-title">circRNA Discovery in PDAC</div>
+            <div class="wc-body">Search circRNA databases and PDAC literature. Build a shared spreadsheet of PDAC-associated circRNAs including circRNA name, host gene, direction of change (up/down), and source paper.</div>
+            <div class="wc-tags">
+              <span class="tag blue">circRNA databases</span>
+              <span class="tag">Spreadsheet output</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 6</div>
+            <div class="wc-title">Exosome Filtering</div>
+            <div class="wc-body">Cross-reference circRNA candidates from Week 5 against EV/exosome RNA databases. Keep only those with evidence of presence in extracellular vesicles. Document every inclusion/exclusion decision with justification.</div>
+            <div class="wc-tags">
+              <span class="tag blue">EV RNA databases</span>
+              <span class="tag">Filtered list</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 7</div>
+            <div class="wc-title">circRNA–miRNA Interaction Mapping</div>
+            <div class="wc-body">Use miRNA target prediction tools to identify microRNAs bound by each candidate circRNA. Record circRNA, miRNA, and binding evidence or prediction scores in an interaction table.</div>
+            <div class="wc-tags">
+              <span class="tag blue">miRNA tools</span>
+              <span class="tag">Interaction table</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 8</div>
+            <div class="wc-title">miRNA–mRNA Target Mapping</div>
+            <div class="wc-body">Retrieve predicted and validated mRNA targets for each miRNA from Week 7. Filter for cancer-relevant genes: cell cycle, metabolism, inflammation. Compile the full circRNA–miRNA–mRNA interaction table.</div>
+            <div class="wc-tags">
+              <span class="tag blue">Target databases</span>
+              <span class="tag">Full interaction table</span>
+            </div>
+          </div>
+        </div>
+        <div class="deliverables-box" style="margin-top:28px;">
+          <h3>Phase 2 — Deliverables</h3>
+          <div class="del-grid">
+            <div class="del-item">Shared spreadsheet of PDAC circRNA candidates with references</div>
+            <div class="del-item">Refined list of exosome-associated circRNAs with inclusion rationale</div>
+            <div class="del-item">circRNA–miRNA interaction table with evidence scores</div>
+            <div class="del-item">Complete circRNA–miRNA–mRNA regulatory chain table</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PHASE 3 ── -->
+      <div class="phase-block" id="phase-3">
+        <div class="phase-header-card">
+          <div>
+            <div class="phc-label">Phase 3 · Weeks 9–12</div>
+            <div class="phc-title">Tumor Data Integration & Network Construction</div>
+          </div>
+          <div class="phc-weeks">
+            <div class="wval">4</div>
+            <div class="wlbl">Weeks</div>
+          </div>
+        </div>
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="wc-num">Week 9</div>
+            <div class="wc-title">TCGA-PAAD Data Familiarization</div>
+            <div class="wc-body">Download TCGA-PAAD mRNA expression and clinical data. Explore the dataset in R — sample sizes, variable types, missing data, and data distribution. Understand how the data is structured before any analysis.</div>
+            <div class="wc-tags">
+              <span class="tag">TCGA-PAAD</span>
+              <span class="tag green">R exploration</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 10</div>
+            <div class="wc-title">Expression Validation</div>
+            <div class="wc-body">Perform differential expression checks on predicted mRNA targets from Phase 2. Remove genes that are not dysregulated in real PDAC tumor data vs normal pancreatic tissue — this filters out false predictions from computational tools.</div>
+            <div class="wc-tags">
+              <span class="tag green">DEG analysis</span>
+              <span class="tag">Validated target list</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 11</div>
+            <div class="wc-title">ceRNA Network Construction</div>
+            <div class="wc-body">Create network input files from all validated circRNA–miRNA–mRNA interactions. Import into Cytoscape. Nodes represent circRNAs, miRNAs, and mRNAs; edges represent regulatory interactions from the interaction table.</div>
+            <div class="wc-tags">
+              <span class="tag blue">Cytoscape</span>
+              <span class="tag">Network figure</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 12</div>
+            <div class="wc-title">Network Interpretation</div>
+            <div class="wc-body">Perform topology analysis. Extract hub circRNAs (highly connected nodes) and key mRNA targets. Write a short biological interpretation of network structure and identify the most promising biomarker candidates from network centrality.</div>
+            <div class="wc-tags">
+              <span class="tag blue">Topology analysis</span>
+              <span class="tag">Hub circRNAs</span>
+            </div>
+          </div>
+        </div>
+        <div class="deliverables-box" style="margin-top:28px;">
+          <h3>Phase 3 — Deliverables</h3>
+          <div class="del-grid">
+            <div class="del-item">Validated mRNA target list supported by TCGA-PAAD data</div>
+            <div class="del-item">Complete ceRNA network figure from Cytoscape</div>
+            <div class="del-item">List of hub circRNAs by network centrality</div>
+            <div class="del-item">Short biological interpretation report</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PHASE 4 ── -->
+      <div class="phase-block" id="phase-4">
+        <div class="phase-header-card">
+          <div>
+            <div class="phc-label">Phase 4 · Weeks 13–16</div>
+            <div class="phc-title">Pathway Enrichment & Survival Analysis</div>
+          </div>
+          <div class="phc-weeks">
+            <div class="wval">4</div>
+            <div class="wlbl">Weeks</div>
+          </div>
+        </div>
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="wc-num">Week 13</div>
+            <div class="wc-title">Pathway Enrichment Analysis</div>
+            <div class="wc-body">Run pathway enrichment on the validated mRNA target gene set using KEGG, Reactome, and MSigDB. Identify cancer-related, immune, metabolic, and cell proliferation pathways. A strong biomarker panel must connect to known cancer biology.</div>
+            <div class="wc-tags">
+              <span class="tag">KEGG</span>
+              <span class="tag">Reactome</span>
+              <span class="tag">MSigDB</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 14</div>
+            <div class="wc-title">Survival Analysis Setup</div>
+            <div class="wc-body">Load TCGA-PAAD clinical outcome data using the R survival package. Prepare patient groups by splitting samples into high- and low-expression groups for each candidate circRNA.</div>
+            <div class="wc-tags">
+              <span class="tag green">R survival pkg</span>
+              <span class="tag">Patient groups</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 15</div>
+            <div class="wc-title">Kaplan–Meier Survival Modeling</div>
+            <div class="wc-body">Generate Kaplan–Meier survival curves for each candidate circRNA. Apply log-rank tests to assess statistical significance. Rank circRNAs by their prognostic value and association with overall survival.</div>
+            <div class="wc-tags">
+              <span class="tag green">KM plots</span>
+              <span class="tag">Log-rank test</span>
+              <span class="tag">Prognostic ranking</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 16</div>
+            <div class="wc-title">Final Biomarker Panel Selection</div>
+            <div class="wc-body">Select a small, clinically translatable circRNA panel. Each candidate must satisfy all three criteria: exosome-associated, participating in the ceRNA network, and significantly linked to patient survival. Provide biological rationale per candidate.</div>
+            <div class="wc-tags">
+              <span class="tag gold">Final panel</span>
+              <span class="tag">Biological rationale</span>
+            </div>
+          </div>
+        </div>
+        <div class="deliverables-box" style="margin-top:28px;">
+          <h3>Phase 4 — Deliverables</h3>
+          <div class="del-grid">
+            <div class="del-item">Pathway enrichment table and dot plot figure</div>
+            <div class="del-item">Kaplan–Meier plots for all candidate circRNAs</div>
+            <div class="del-item">Ranked list of prognostically significant circRNAs</div>
+            <div class="del-item">Final circRNA biomarker panel with full justification</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PHASE 5 ── -->
+      <div class="phase-block" id="phase-5">
+        <div class="phase-header-card">
+          <div>
+            <div class="phc-label">Phase 5 · Weeks 17–24</div>
+            <div class="phc-title">Writing, Figures & Final Output</div>
+          </div>
+          <div class="phc-weeks">
+            <div class="wval">8</div>
+            <div class="wlbl">Weeks</div>
+          </div>
+        </div>
+        <div class="week-grid">
+          <div class="week-card">
+            <div class="wc-num">Week 17</div>
+            <div class="wc-title">Manuscript Figure Generation</div>
+            <div class="wc-body">Produce all six manuscript-ready figures using ggplot2 and ComplexHeatmap: conceptual framework, circRNA landscape heatmap, ceRNA network, pathway enrichment, KM survival curves, and summary model.</div>
+            <div class="wc-tags">
+              <span class="tag green">ggplot2</span>
+              <span class="tag green">ComplexHeatmap</span>
+              <span class="tag gold">6 figures</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 18</div>
+            <div class="wc-title">Methods Documentation</div>
+            <div class="wc-body">Each student writes one methods section. Compile all clean, annotated R scripts and a README file that allows a future researcher to reproduce every result from raw data without assistance.</div>
+            <div class="wc-tags">
+              <span class="tag gold">README</span>
+              <span class="tag">Clean scripts</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Week 19</div>
+            <div class="wc-title">Interpretation & Limitations</div>
+            <div class="wc-body">Write the biological meaning of the findings and explicitly acknowledge limitations of in silico analysis: lack of experimental validation, database annotation gaps, and population-level vs. patient-level applicability.</div>
+            <div class="wc-tags">
+              <span class="tag">Limitations</span>
+              <span class="tag">Interpretation</span>
+            </div>
+          </div>
+          <div class="week-card">
+            <div class="wc-num">Weeks 20–24</div>
+            <div class="wc-title">Manuscript Draft & Presentation</div>
+            <div class="wc-body">Draft the full manuscript. Prepare the presentation deck for internal team review. Compile the final internal project report combining all outputs from all five phases into a single cohesive document.</div>
+            <div class="wc-tags">
+              <span class="tag gold">Manuscript draft</span>
+              <span class="tag gold">Presentation deck</span>
+              <span class="tag gold">Internal report</span>
+            </div>
+          </div>
+        </div>
+        <div class="deliverables-box" style="margin-top:28px;">
+          <h3>Final Project Deliverables — Every Researcher</h3>
+          <div class="del-grid">
+            <div class="del-item">Reproducible analysis pipeline with clean, annotated scripts</div>
+            <div class="del-item">ceRNA network figure (Cytoscape) with hub annotation</div>
+            <div class="del-item">Kaplan–Meier survival analysis and prognostic ranking</div>
+            <div class="del-item">Final circRNA biomarker panel with biological rationale</div>
+            <div class="del-item">Short interpretation and limitations report</div>
+            <div class="del-item">Complete README for full reproducibility</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <span class="foot-brand">ExoRNA Project</span>
+  <ul class="foot-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+  <span class="foot-copy">20–24 WEEK ROADMAP · 5 PHASES</span>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  function switchPhase(n, btn) {
+    document.querySelectorAll('.phase-block').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.phase-pill').forEach(el => el.classList.remove('active'));
+    document.getElementById('phase-' + n).classList.add('active');
+    btn.classList.add('active');
+    document.getElementById('phase-' + n).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+</script>
+</body>
+</html>
