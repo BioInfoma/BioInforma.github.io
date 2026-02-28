@@ -14,7 +14,7 @@
 <nav class="nav">
   <a href="index.html" class="nav-brand">
     <div class="nav-brand-icon">
-      <svg viewBox="0 0 18 18" fill="none">
+      <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="9" cy="9" r="3.5" stroke="white" stroke-width="1.5"/>
         <circle cx="9" cy="9" r="7.5" stroke="white" stroke-width="1" stroke-dasharray="2 2"/>
         <path d="M9 1.5 Q13 5 9 9 Q5 13 9 16.5" stroke="#10b981" stroke-width="1.5" fill="none"/>
@@ -32,7 +32,6 @@
 
 <div class="page">
 
-  <!-- Hero -->
   <div class="hero" style="min-height:50vh;">
     <div class="hero-bg">
       <div class="hero-bg-grid"></div>
@@ -52,26 +51,24 @@
     </div>
   </div>
 
-  <!-- Main content -->
   <section>
     <div class="container">
 
-      <!-- Tabs -->
       <div class="tabs-bar reveal">
-        <button class="tab-btn active" onclick="switchTab('people', this)">Team Members</button>
-        <button class="tab-btn" onclick="switchTab('calendar', this)">Meeting Schedule</button>
-        <button class="tab-btn" onclick="switchTab('docs', this)">Shared Documents</button>
-        <button class="tab-btn" onclick="switchTab('format', this)">Meeting Format</button>
+        <button class="tab-btn active"    onclick="switchTab('people', this)">Team Members</button>
+        <button class="tab-btn"           onclick="switchTab('calendar', this)">Meeting Schedule</button>
+        <button class="tab-btn"           onclick="switchTab('docs', this)">Shared Documents</button>
+        <button class="tab-btn"           onclick="switchTab('format', this)">Meeting Format</button>
       </div>
 
-      <!-- TAB: PEOPLE -->
       <div class="tab-pane active" id="tab-people">
         <div style="margin-bottom:32px;">
           <h2 class="section-title">Project Researchers</h2>
-          <p class="section-body">Team member's name, role, and short biography.</p>
+          <p class="section-body"> Team member's name, role, and short biography.</p>
         </div>
 
         <div class="team-grid">
+
           <div class="team-card">
             <div class="avatar">PI</div>
             <h3>Kolawole Temitope</h3>
@@ -82,31 +79,37 @@
           <div class="team-card">
             <div class="avatar">R1</div>
             <h3>Name</h3>
-            <div class="team-role">Project Lead 1</div>
-            <p class="team-bio">Oversees scientific direction and weekly milestones.</p>
+            <div class="team-role"> Project Lead 1</div>
+            <p class="team-bio">Oversees the scientific direction of the project, keeps the methodology on track, and ensures weekly milestones are met. Coordinates technical decisions and supports members with bioinformatics and analysis challenges.</p>
           </div>
 
           <div class="team-card">
             <div class="avatar">R2</div>
             <h3>Name</h3>
-            <div class="team-role">Project Lead 2</div>
-            <p class="team-bio">Tracks progress, reviews outputs, and ensures reproducibility.</p>
+            <div class="team-role"> Project Lead 2</div>
+            <p class="team-bio">Supports Project Lead 1 by tracking progress across teams, reviewing outputs for quality and consistency, and helping resolve blockers. Ensures documentation, code, and results stay organized and reproducible.</p>
           </div>
 
           <div class="team-card">
             <div class="avatar">R3</div>
             <h3>Name</h3>
             <div class="team-role">Communications Officer</div>
-            <p class="team-bio">Handles updates, meeting notes, and project communication.</p>
+            <p class="team-bio">Handles internal updates and external communication for the project, including meeting notes, progress summaries, and announcements to COGSAR. Keeps everyone aligned on timelines, deliverables, and next steps..</p>
           </div>
+
+          <div class="team-card add-card">
+            <div class="add-icon">＋</div>
+            <span>Add team member</span>
+            <span style="font-size:0.75rem;opacity:.6;"> placeholder</span>
+          </div>
+
         </div>
       </div>
 
-      <!-- TAB: CALENDAR (FIXED CLOSING) -->
       <div class="tab-pane" id="tab-calendar">
         <div style="margin-bottom:32px;">
           <h2 class="section-title">Meeting Schedule</h2>
-          <p class="section-body">Google Calendar for project meetings.</p>
+          <p class="section-body"> Google Calendar.</p>
         </div>
 
         <div class="embed-frame">
@@ -118,104 +121,160 @@
             </div>
             <span class="etb-name">Google Calendar — ExoRNA Project Meetings</span>
           </div>
-
           <div class="embed-body">
             <div class="eicon">📅</div>
             <p>
-              <a target="_blank"
-                href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=N3NvaWx2MzVhZDRnY2tsNmM3Z2VmZDZjcmJfMjAyNjAzMDdUMTUwMDAwWiBrb2xhd29sZXRlbWl0b3BlMjAyMEBt&tmsrc=kolawoletemitope2020%40gmail.com&scp=ALL">
-                Open Calendar Event
-              </a>
+              <code><a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&amp;tmeid=N3NvaWx2MzVhZDRnY2tsNmM3Z2VmZDZjcmJfMjAyNjAzMDdUMTUwMDAwWiBrb2xhd29sZXRlbWl0b3BlMjAyMEBt&amp;tmsrc=kolawoletemitope2020%40gmail.com&amp;scp=ALL"><img border="0" src="https://calendar.google.com/calendar/images/ext/gc_button1_en.gif" alt="Google Calendar"></a></code>
             </p>
           </div>
         </div>
-      </div> <!-- 🔥 THIS WAS MISSING IN YOUR CODE -->
-
-      <!-- TAB: DOCUMENTS (FIXED IFRAME) -->
-      <div class="tab-pane" id="tab-docs">
+      </div> <div class="tab-pane" id="tab-docs">
         <div style="margin-bottom:32px;">
           <h2 class="section-title">Shared Documents</h2>
-          <p class="section-body">Key project documents and shared Drive folders.</p>
+          <p class="section-body">Key project documents and shared Drive folders — access everything from one place without leaving the website.</p>
         </div>
-
-        <div class="embed-frame">
+       
+        <div class="embed-frame" style="margin-top:24px;">
           <div class="embed-titlebar">
+            <div class="etb-dots">
+              <div class="etb-dot" style="background:#4285f4;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#fbbc05;"></div>
+            </div>
             <span class="etb-name">Project Documentation — Main Document</span>
           </div>
-
-          <!-- FIXED iframe syntax -->
-          <iframe
+          <iframe 
             src="https://docs.google.com/document/d/e/2PACX-1vRwKSY97_XaTCGcNAWx-YgohlUiBt3piAzy0RCX1j0MN6QWhcqDLtLZuKR1RT9FzX1c1Ksgn94CIPiP/pub?embedded=true"
             class="live-embed"
-            frameborder="0"
-            style="width:100%; height:500px;">
+            frameborder="0">
           </iframe>
         </div>
 
         <div class="embed-frame" style="margin-top:20px;">
           <div class="embed-titlebar">
+            <div class="etb-dots">
+              <div class="etb-dot" style="background:#fbbc05;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#4285f4;"></div>
+            </div>
             <span class="etb-name">Project Drive Folder</span>
           </div>
           <iframe
             src="https://drive.google.com/embeddedfolderview?id=1IlWhy5_d8JNuVDlx6J56G_I2nP8hDoRr#list"
             class="live-embed"
-            style="width:100%; height:400px;"
+            style="height:400px;"
             frameborder="0">
           </iframe>
         </div>
-      </div>
 
-      <!-- TAB: MEETING FORMAT -->
-      <div class="tab-pane" id="tab-format">
+        <div class="embed-frame" style="margin-top:20px;">
+          <div class="embed-titlebar">
+            <div class="etb-dots">
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+              <div class="etb-dot" style="background:#34a853;"></div>
+            </div>
+            <span class="etb-name">Candidate circRNA Spreadsheet</span>
+          </div>
+          <div class="embed-body">
+            <div class="eicon">📊</div>
+          </div>
+        </div>
+
+        <div class="quick-links" style="margin-top:28px;">
+          <a href="https://drive.google.com/drive/u/0/folders/1IlWhy5_d8JNuVDlx6J56G_I2nP8hDoRr" class="qlink" target="_blank" rel="noopener">📁 Drive Folder</a>
+          <a href="https://docs.google.com/document/d/14aUmK2Sifx004sznEynNpD3vggim9rIV4SsiCHvqpf0/edit?tab=t.cgy5losyjhrp" class="qlink" target="_blank" rel="noopener">📄 Project Document</a>
+          <a href="#" class="qlink">📊 Candidate Spreadsheet</a>
+          <a href="#" class="qlink">📚 Reference Library</a>
+        </div>
+
+      </div><div class="tab-pane" id="tab-format">
         <div style="margin-bottom:32px;">
           <h2 class="section-title">Weekly Meeting Format</h2>
-          <p class="section-body">
-            Every meeting follows the same four-point agenda: simple, efficient, and focused.
-          </p>
+          <p class="section-body">Every meeting follows the same four-point agenda — simple, efficient, and focused on moving the project forward. Sessions should not exceed 60 minutes.</p>
         </div>
 
         <div class="meeting-format-card">
-          <h3>Standard Agenda: Every Meeting</h3>
-
-          <div class="agenda-item">
-            <h4>1. What did you do this week?</h4>
-            <p>Each researcher reports measurable progress.</p>
+          <h3>Standard Agenda — Every Meeting</h3>
+          <div class="agenda-items">
+            <div class="agenda-item">
+              <div class="agenda-num">1</div>
+              <div class="agenda-text">
+                <h4>What did you do this week?</h4>
+                <p>Each researcher reports progress against last week's stated goal. Be specific — deliverables, not effort. Aim for two to three sentences per person.</p>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-num">2</div>
+              <div class="agenda-text">
+                <h4>What worked?</h4>
+                <p>Highlight successful steps, useful databases, helpful papers, or insights gained. Share resources that others might benefit from. Positive results are worth recording.</p>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-num">3</div>
+              <div class="agenda-text">
+                <h4>What broke?</h4>
+                <p>Surface blockers, errors, confusion, or dead ends early so the team can problem-solve together before they become delays. No blame — only solutions.</p>
+              </div>
+            </div>
+            <div class="agenda-item">
+              <div class="agenda-num">4</div>
+              <div class="agenda-text">
+                <h4>What is next week's goal?</h4>
+                <p>Define one clear, concrete, deliverable-oriented goal for the coming week. It should be specific enough that success is unambiguous at the next meeting.</p>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="agenda-item">
-            <h4>2. What worked?</h4>
-            <p>Highlight successful methods, tools, or insights.</p>
+        <div class="card-grid-2" style="margin-top:24px;">
+          <div class="card">
+            <div class="card-icon">📖</div>
+            <h3>Phase 1 Meeting Goal</h3>
+            <p>All members can explain exosomes and circRNAs in plain language. Written summaries submitted. Live R code demonstrated during the meeting session.</p>
           </div>
-
-          <div class="agenda-item">
-            <h4>3. What broke?</h4>
-            <p>Discuss blockers, errors, or failed analyses.</p>
+          <div class="card">
+            <div class="card-icon">🔍</div>
+            <h3>Phase 2 Meeting Goal</h3>
+            <p>Shared spreadsheets reviewed together. Inclusion/exclusion decisions for exosome filtering discussed and recorded with explicit reasoning.</p>
           </div>
-
-          <div class="agenda-item">
-            <h4>4. Next week’s goal</h4>
-            <p>Define one clear, deliverable-oriented objective.</p>
+          <div class="card">
+            <div class="card-icon">🕸️</div>
+            <h3>Phase 3–4 Meeting Goal</h3>
+            <p>Live demo of analysis outputs: differential expression results, Cytoscape network screenshot, and initial Kaplan–Meier survival curves presented each week.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">✍️</div>
+            <h3>Phase 5 Meeting Goal</h3>
+            <p>Draft figures and text sections reviewed. Each researcher reads and annotates at least one colleague's methods section before every Phase 5 meeting.</p>
           </div>
         </div>
       </div>
 
-    </div>
-  </section>
+    </div></section>
 
 </div>
 
 <footer>
   <span class="foot-brand">ExoRNA Project</span>
+  <ul class="foot-links">
+    <li><a href="index.html">Project</a></li>
+    <li><a href="phases.html">Timeline</a></li>
+    <li><a href="methods.html">Methods</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+  <span class="foot-copy">TEAM · SCHEDULE · RESOURCES</span>
 </footer>
 
+<script src="main.js"></script>
 <script>
-function switchTab(id, btn) {
-  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  btn.classList.add('active');
-}
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    btn.classList.add('active');
+  }
 </script>
-
 </body>
 </html>
